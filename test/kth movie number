@@ -1,0 +1,48 @@
+Kth Movie Member
+You are standing in queue to buy the latest Batman movie ticket. You noticed the queue looked like and singly LinkedList.
+Each person has some amount of money with them, you are bored, and you want to find the amount of money the person is standing at the ‘Kth’ of the queue from the back.
+Check examples for better understanding.
+Example :
+N = 4,  K = 2  
+NODE = 1 -> 2 -> 3 -> 4
+In the following example, the 2nd person from the back has ‘3’ units of money.
+Input Format :
+The first line contains an integer ‘T’ denoting the number of test cases. Then each test case follows.
+The first line of the test case contains an integer ‘K’.
+
+The second line of the test case contains ‘N + 1’ space-separated where the first 'N' elements represent the LinkedList node. The last integer is always '-1', representing the end of the LinkedList.
+Output format :
+For each test case, print the amount of money the ‘Kth’ person from the back of the queue has with them.
+Note :
+You don’t need to print anything. It has already been taken care of. Just implement the given function.
+Constraints :
+1 <= T <= 10
+1 <= K <= N <= 10^5
+1 <= HEAD->VAL <= 10^5
+Sum of N <= 10^5
+
+Time Limit: 1 sec
+Sample Input 1 :
+2
+3
+2 2 2 2 -1
+3
+4 5 3 1 2 6 -1
+Sample Output 1 :
+2
+1
+Explanation Of Sample Input 1 :
+For test case 1, 
+In the queue, the person from ‘3rd’ last, has ‘2’ units of money.
+
+For test case 2,
+In the queue, the person from ‘3rd’ last, has ‘1’ unit of money.
+Sample Input 2 :
+2
+4
+3 1 2 2 -1
+1
+5 5 1 2 1 2 -1
+Sample Output 2 :
+3
+2
