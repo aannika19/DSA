@@ -1,0 +1,63 @@
+Remove Loop
+Ninja is building a racecourse, a racecourse can be denoted as a singly linked list, which contains ‘N’ checkpoints as nodes and ends after the last node.
+But accidentally Ninja joined the last checkpoint of the racecourse with the ‘Kth’ checkpoint (0 based indexing) of the racecourse, which created an infinite loop for racecars.
+Your task is to remove all the checkpoints which are in the loop and print the racecourse after the removal of the loop.
+Refer example for better understanding.
+Example :
+ N = 4
+ K = 1
+ NODE = 1->2->3->4
+
+
+You can see there is a loop from the ‘1st’ node to the ‘3rd’ node (0 based), so we will remove all nodes from (1 - 3), so the answer is [ 1 ].
+Input Format :
+The first line contains an integer ‘T’ denoting the number of test cases. Then each test case follows.
+
+The first line of the test case contains ‘N + 1’ space-separated where the first 'N' elements represent the LinkedList node, and the last integer is always '-1' representing the end of the LinkedList.
+
+The second line contains a single integer ‘K’ denoting the start node of the loop.
+Output format :
+Print the racecourse after removing loop nodes. It is guaranteed there will be at least one node after removal.
+Note :
+You don’t need to print anything. It has already been taken care of. Just implement the given function.
+Constraints :
+1 <= T <= 10
+1 <= N <= 1e5
+0 <= K < N 
+
+Sum of N <= 10^5
+
+Time Limit: 1 sec
+Sample Input 1 :
+2
+1 4 5 6 7 8 -1
+3
+4 5 7 6 -1
+1
+Sample Output 1 :
+1 4 5 
+4 
+Explanation Of Sample Input 1 :
+For test case 1, 
+Initially the racecourse looks like,
+
+
+After removing, 6->7->8 (Nodes in the loop), our final LinkedList looks like this.
+
+
+For test case 2,
+Initially, the racecourse looks like,
+
+
+After removing, 6->7->8 (Nodes in the loop), our final LinkedList looks like this.
+
+
+Sample Input 2 :
+2
+1 4 5 6 -1
+3
+1 3 -1
+1
+Sample Output 2 :
+1 4 5 
+1 
