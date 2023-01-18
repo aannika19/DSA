@@ -1,0 +1,70 @@
+Are We Connected?
+You are given the head pointers of ‘K’ singly-linked lists.
+Two linked lists, ‘A’ and ‘B’, are connected if they form a Y-shape, i.e., intersect at a common node. These linked lists follow the transitive property, which states that If ‘A’ and ‘B’ are connected, and ‘B’ and ‘C’ are connected, then ‘A’ and ‘C’ are connected.
+Your task is to find out if all the ‘K’ lists are connected or not. A set of ‘K’ lists are connected if for every pair of lists, ‘A’ and ‘B’, ‘A’ != ‘B’, ‘A’ and ‘B’ are connected. Return the integer 1 if all the ‘K’ lists are connected; otherwise, return the integer 0.
+Example :
+
+
+‘K’ = 3, ‘N’ = 9
+You are given the pointers to the nodes ‘A’, ‘B’, and ‘C’. Here, ‘A’ and ‘B’ are connected, as the two linked lists intersect at the node with value 6. Also, ‘B’ and ‘C’ are connected as they intersect at the node with a value of 10. By transverse property, ‘A’ and ‘C’ are also connected. Hence, the above set of lists is connected. Therefore, the answer is 1.
+Input Format :
+The first line contains a single integer ‘T’ denoting the number of test cases, then the test case follows.
+
+The first line of each test case contains two space-separated integers, ‘K’ and ‘N’, denoting the number of linked lists and the total number of nodes in all the linked lists.
+
+The second line of each test case contains ‘N’ space-separated integers denoting the values of all the nodes in the linked list.
+
+The third line of each test case contains ‘N’ space-separated integers denoting the node's index to which the current node points to. If the value is -1, then it points to ‘NULL’.
+Output Format :
+For each test case, return the integer 1 if the ‘K’ lists are connected; otherwise, return the integer 0.
+
+Output for each test case will be printed on a separate line.
+Note :
+You are not required to print anything; it has already been taken care of. Just implement the function.
+Constraints :
+1 ≤ T ≤ 10
+1 ≤ N ≤ 10^5
+1 ≤ K ≤ N
+1 ≤ Node->data ≤ 10^9
+It is guaranteed that the maximum depth of a node is 16. It is also guaranteed that the sum of ‘N’ is ≤ 10^5 for all test cases, and there are exactly 'K' nodes with the in-degree 0. All the linked lists are null-terminating.
+
+Time limit: 1 sec
+Sample Input 1 :
+2
+6 8
+10 12 6 7 3 10 8 9
+6 -1 -1 6 -1 6 7 -1
+4 8
+13 6 1 10 9 14 2 4
+3 4 3 7 6 6 7 -1
+Sample Output 1 :
+0
+1
+Explanation For Sample Input 1 :
+For test case 1: 
+The linked lists you will be given are (indices):
+0 -> 6 -> 7 -> NULL
+1 -> NULL
+2 -> NULL
+3 -> 6 -> 7 -> NULL
+4 -> NULL
+5 -> 6 -> 7 > NULL
+6 -> 7 -> NULL
+7 -> NULL
+As the linked list pair (1, 2) is not intersecting, the answer is 0. Note that many pairs are not intersecting; (1, 2) is just one such pair.
+
+For test case 2:
+
+
+All the linked lists are connected directly or indirectly. Hence, the answer is 1.
+Sample Input 2 :
+2
+5 10
+11 12 4 1 1 2 10 15 1 7
+8 3 7 7 9 6 9 8 9 -1
+7 9
+15 15 9 2 9 1 5 14 9
+-1 7 7 8 -1 -1 -1 -1 -1
+Sample Output 2 :
+1
+0
