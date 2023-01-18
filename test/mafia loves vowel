@@ -1,0 +1,50 @@
+Mafia Loves Vowels
+Mafia has a linked list of characters. He loves vowels ('A', 'E', 'I', 'O', 'U') so much that he wants to see them in front.
+So he asked for your help in solving this task.
+Given a linked list where each node contains a character, without changing the value of nodes, sort the linked list in such a way that all nodes with vowels ('A', 'E', 'I', 'O', 'U') are before than other nodes, rest the order should remain constant.
+For Example :
+Original List : 
+'B' -> 'F' -> 'E' -> 'A' -> 'D'
+
+Sorted List : 
+'E' -> 'A' -> 'B' -> 'F' -> 'D'
+Input Format :
+The first line contains an integer 'T', which denotes the number of test cases to be run. Then the test cases follow.
+
+The first line of each test case contains one integer, 'N', denoting the size of the linked list.
+
+The second line contains 'N' space-separated characters, representing the order of characters in the linked list.
+Output format :
+For each test case, print 'N' space-separated characters representing the sorted linked list.
+
+Print the output of each test case in a new line.
+Constraints :
+1 <= T <= 10
+1 <= N <= 10^5
+Each character in the linked list will be an Upper case English alphabet, i.e., inclusive from 'A' to 'Z'.
+
+Time Limit: 1 sec
+Sample Input 1 :
+2
+5
+I E O B A
+2
+W S
+Sample Output 1 :
+I E O A B
+W S
+Explanation Of Sample Input 1 :
+For test  case 1:
+The characters 'I', 'E', 'O', 'A' are vowels, and character 'B' is not a vowel, so 'B' is at the last while others are at the front, and the original order of vowels is same.
+
+For test case 2:
+There are no vowels, so the result is the same as the original list.
+Sample Input 2 :
+2
+5
+A E I O U
+4
+Z Y A E
+Sample Output 2 :
+A E I O U
+A E Z Y
