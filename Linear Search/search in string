@@ -1,0 +1,19 @@
+import java.util.Arrays;
+class Main{
+    public static void main(String[] args){
+        String name = "Aannika";
+        char target = 'i';
+        System.out.println(search(name, target));
+    }
+    static boolean search(String str, char alpha){
+        if(str.length() == 0){
+            return false;
+        }
+        for(char c:str.toCharArray()){
+            if(c == alpha){
+                return true;
+            }
+        }
+        return false;
+    }
+}
