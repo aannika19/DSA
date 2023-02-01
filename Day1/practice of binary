@@ -1,0 +1,28 @@
+
+class Main {
+    public static void main(String[] args) {
+        int[] array = {-43, -32, -8, 0, 12, 23, 45, 67, 75, 78, 83, 87, 91, 99};
+        int target = -8;
+        System.out.println(binary(array, target));
+    }
+    static int binary(int[]var, int element){
+        if(var.length==0){
+            return -1;
+        }
+        int start = 0;
+        int end = var.length-1;
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(element<var[mid]){
+                end=mid-1;
+            }
+            else if (element>var[mid]){
+                start = mid-1;
+            }
+            else{
+                return mid;
+            }
+        }
+        return -1;
+    }
+}
