@@ -33,7 +33,7 @@ class Main {
         }
         else{
             if(el>var[mid]){
-                return end = mid-1;
+                end = mid-1;
             }
             else{
                 start = mid+1;
